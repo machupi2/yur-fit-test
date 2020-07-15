@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3009eab4d7d57841a60726adf893c95, type: 3}
+  m_Name: DefaultYURSettings
+  m_EditorClassIdentifier: 
+  WatchHandChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _handBeingUsed: 1
+  _leftPositionOffset: {x: -0.0708, y: -0.0201, z: -0.1337}
+  _leftEulerOffset: {x: 21.755, y: 13.447, z: 90.42001}
+  _rightPositionOffset: {x: 0, y: -0.0201, z: -0.1337}
+  _rightEulerOffset: {x: 21.755, y: 13.447, z: 90.42001}
+  _watchAndTileShaderOverride: {fileID: 46, guid: 0000000000000000f000000000000000,
+    type: 0}
+  _tmpShaderOverride: {fileID: 0}
+  _imageShaderOverride: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  _shaderColorProperty: _Color
+  _watchRenderQueue: 3050
+  LayerToSet: Default
+  Font: {fileID: 11400000, guid: b067329db253385498352920571f5e20, type: 2}
+  _turnOffYURServiceOnDisable: 0

@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: cf70867f1fbfec84dab40758dff0fbd0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Antenna
+    100002: Battery
+    100004: Chip
+    100006: Computer
+    100008: Cords
+    100010: Cords_2
+    100012: Door_L
+    100014: Door_R
+    100016: Main Body
+    100018: Online
+    100020: Power Lamp
+    100022: Tapes
+    100024: //RootNode
+    100026: Main Body.001
+    400000: Antenna
+    400002: Battery
+    400004: Chip
+    400006: Computer
+    400008: Cords
+    400010: Cords_2
+    400012: Door_L
+    400014: Door_R
+    400016: Main Body
+    400018: Online
+    400020: Power Lamp
+    400022: Tapes
+    400024: //RootNode
+    400026: Main Body.001
+    2100000: Material.001
+    2100002: Metal.001
+    2100004: bleck plastic
+    2100006: Gold
+    2100008: red
+    2100010: Online
+    2100012: GreY Plastic
+    2100014: Red
+    2100016: Green
+    2100018: Yellow
+    2100020: Black
+    2300000: Antenna
+    2300002: Battery
+    2300004: Chip
+    2300006: Computer
+    2300008: Cords
+    2300010: Cords_2
+    2300012: Door_L
+    2300014: Door_R
+    2300016: Main Body
+    2300018: Online
+    2300020: Power Lamp
+    2300022: Tapes
+    2300024: Main Body.001
+    3300000: Antenna
+    3300002: Battery
+    3300004: Chip
+    3300006: Computer
+    3300008: Cords
+    3300010: Cords_2
+    3300012: Door_L
+    3300014: Door_R
+    3300016: Main Body
+    3300018: Online
+    3300020: Power Lamp
+    3300022: Tapes
+    3300024: Main Body.001
+    4300000: Main Body
+    4300002: Antenna
+    4300004: Tapes
+    4300006: Chip
+    4300008: Cords_2
+    4300010: Online
+    4300012: Computer
+    4300014: Power Lamp
+    4300016: Battery
+    4300018: Cords
+    4300020: Door_R
+    4300022: Door_L
+    4300024: Main Body.001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

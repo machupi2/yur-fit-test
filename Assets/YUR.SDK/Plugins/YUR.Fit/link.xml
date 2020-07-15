@@ -1,0 +1,33 @@
+<linker>	
+  <assembly fullname="YUR.Fit.Unity" preserve="all"/>	
+  <assembly fullname="YUR.Fit.Core" preserve="all"/>	
+  <assembly fullname="YUR.Fit.AppInterface" preserve="all"/>	
+  <assembly fullname="Microsoft.Extensions.Logging">	
+	<type fullname="Microsoft.Extensions.Logging.*" preserve="all"></type>	
+    <type fullname="Microsoft.Extensions.Logging.LoggerFactory" preserve="all"></type>	
+  </assembly>	
+  <assembly fullname="Microsoft.Extensions.Logging.Abstractions">	
+	<type fullname="Microsoft.Extensions.Logging.*" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Logging.Logger`1" preserve="all"></type>	
+  </assembly>	
+  <assembly fullname="Microsoft.Extensions.Logging.Console">	
+	<type fullname="Microsoft.Extensions.Logging.Console.*" preserve="all"></type>	
+  </assembly>	
+  <assembly fullname="Microsoft.Extensions.Options">	
+	<type fullname="Microsoft.Extensions.Options.*" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Options.OptionsMonitor`1" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Options.OptionsFactory`1" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Options.OptionsCache`1" preserve="all"></type>	
+  </assembly>	
+  <assembly fullname="Microsoft.Extensions.Logging.Configuration">	
+	<type fullname="Microsoft.Extensions.Logging.Configuration.*" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Logging.Configuration.LoggerProviderConfiguration`1" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Logging.Configuration.LoggerProviderConfigureOptions`2" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Logging.Configuration.LoggerProviderConfigurationFactory" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Logging.Configuration.LoggerProviderOptionsChangeTokenSource`2" preserve="all"></type>	
+  </assembly>	
+  <assembly fullname="Microsoft.Extensions.Logging.Debug">	
+	<type fullname="Microsoft.Extensions.Logging.Debug.*" preserve="all"></type>	
+	<type fullname="Microsoft.Extensions.Logging.Debug.DebugLoggerProvider" preserve="all"></type>	
+  </assembly>	
+</linker> 

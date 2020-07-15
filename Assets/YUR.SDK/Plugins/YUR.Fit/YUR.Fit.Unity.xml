@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YUR.Fit.Unity</name>
+    </assembly>
+    <members>
+        <member name="P:YUR.Fit.Unity.CoreServiceManager.IsLoggedIn">
+            <summary>
+            True if the current user is signed into YUR.
+            </summary>
+        </member>
+        <member name="P:YUR.Fit.Unity.CoreServiceManager.Initialized">
+            <summary>
+            True if the CoreServiceManager is fully setup
+            </summary>
+        </member>
+        <member name="T:YUR.Fit.Unity.CoreServiceManager.ExecutionResult">
+            <summary>
+            Describes the final result of the YUR service execution.
+            </summary>
+        </member>
+        <member name="F:YUR.Fit.Unity.CoreServiceManager.ExecutionResult.Success">
+            <summary>
+            The YUR Unity service exited cleanly.
+            </summary>
+        </member>
+        <member name="F:YUR.Fit.Unity.CoreServiceManager.ExecutionResult.UnhandledException">
+            <summary>
+            The YUR Unity service exited with an unhandled exception.
+            </summary>
+        </member>
+        <member name="F:YUR.Fit.Unity.CoreServiceManager.ExecutionResult.UnsupportedClientVersion">
+            <summary>
+            The user is running an incompatible version of the YUR desktop client. 
+            </summary>
+        </member>
+        <member name="E:YUR.Fit.Unity.CoreServiceManager.OnLoginStateChanged">
+            <summary>
+            Triggered when a user logs in/signs out of YUR.
+            </summary>
+        </member>
+        <member name="E:YUR.Fit.Unity.CoreServiceManager.OverlayUpdateAction">
+            <summary>
+            Triggered when YUR generates an update with displayable metrics
+            </summary>
+        </member>
+        <member name="E:YUR.Fit.Unity.CoreServiceManager.ServiceShutdownAction">
+            <summary>
+            Triggered when the service is shutting down
+            </summary>
+        </member>
+        <member name="E:YUR.Fit.Unity.CoreServiceManager.OnUserListUpdated">
+            <summary>
+            Triggered when the list of avaiable/switchable users is updated
+            </summary>
+        </member>
+        <member name="P:YUR.Fit.Unity.CoreServiceManager.IsUsingIPC">
+            <summary>
+            Returns true if the service manager is running in IPC mode rather than hosting the services internally
+            </summary>
+        </member>
+        <member name="E:YUR.Fit.Unity.CoreServiceManager.IPCConnectionStatusChanged">
+            <summary>
+            Triggered when the IPC client connects or disconnects.  Only triggered when forceIPCOnly is true.
+            </summary>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.GoogleLogin(System.Action,System.Action{System.String})">
+            <summary>
+            Login to YUR with Google
+            </summary>
+            <param name="OnSuccess">Callback that occurs when the login is successful</param>
+            <param name="OnFailure">Callback that occurs when the login fails</param>
+            <returns>A cancellation token which can be used to abort the Google login process. This will result in OnFailure being called with the error "LOGIN_ABORTED_ERROR"</returns>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.ShortcodeLogin(System.Action{YUR.Fit.Unity.Utilities.YURShortcodeResponse},System.Action,System.Action{System.String})">
+            <summary>
+            Login with YUR shortcode auth
+            </summary>
+            <param name="OnShortcodeReceived">Callback that occurs when the YUR shortcode response is received</param>
+            <param name="OnSuccess">Callback that occurs when the login succeeds</param>
+            <param name="OnFailure">Callback that occurs when the login fails</param>
+            <returns></returns>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.EmailLogin(System.String,System.String,System.Action,System.Action{System.String})">
+            <summary>
+            Login to YUR using an email/password combination.
+            </summary>
+            <param name="email">The users email</param>
+            <param name="password">The users password</param>
+            <param name="OnSuccess">An action to be invoked on success.</param>
+            <param name="OnFailure">An action to be invoked on failure. Returns a string with a description of the error that occurred.</param>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.Logout">
+            <summary>
+            Signs out the active user.
+            </summary>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.SetWorkoutMetadata(System.String)">
+            <summary>
+            Sets the metadata associated with the current workout. This should describe the activity the user is currently partaking in.
+            </summary>
+            <param name="metadata">A description of the users current activity.</param>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.RunServices(System.String,System.String,System.Action{YUR.Fit.Core.Models.OverlayStatusUpdate},System.Action{YUR.Fit.Unity.CoreServiceManager.ExecutionResult},System.Boolean)">
+             <summary>
+             Starts up the core YUR services asynchronously, and begins a workout if required. *Make sure to call this function from the main Unity thread!*
+             </summary>
+             <param name="productName">The display name of your game or product. If undefined, Application.productName will be used instead.</param>
+             <param name="productIdentifier">A unique identifier which defines your product. If undefined, unity.{Application.companyName}.{Application.productName} will be used instead.</param>
+             <param name="OnOverlayUpdate">Action called when display metrics have updated and been made available</param>
+            <param name="forceIPCOnly">If passed as true, the service will only run in tandem with an available platform service and will not run the service internally</param>
+            <param name="OnServiceShutdown"></param>
+        </member>
+        <member name="M:YUR.Fit.Unity.CoreServiceManager.StopServices(System.Boolean)">
+            <summary>
+            Stops the core YUR services asynchronously.
+            </summary>
+            <param name="immediately">If set to true, the workout will be flushed to disk quickly instead of submitted to the server. If possible, leave this as false to allow YUR to finalize the workout before stopping.</param>
+            <returns>The main YUR service task. Once this task is completed, YUR services have fully stopped. Null if the YUR service isn't running.</returns>
+        </member>
+        <member name="T:YUR.Fit.Unity.Utilities.MonoSingleton`1">
+            <summary>
+            Turns any <see cref="T:UnityEngine.MonoBehaviour"/> based class unto a singleton instance. *First Instance access must be from the main Unity thread!*
+            </summary>
+            <typeparam name="T">A <see cref="T:UnityEngine.MonoBehaviour"/> based class you want instantiated as a singleton instance.</typeparam>
+        </member>
+        <member name="P:YUR.Fit.Unity.Utilities.MonoSingleton`1.Instance">
+            <summary>
+            Creates/gets a singleton instance of the specified type. *First access must be from the main Unity thread!*
+            </summary>
+        </member>
+        <member name="M:YUR.Fit.Unity.Utilities.MonoSingleton`1.Touch">
+            <summary>
+            Instantiates an instance of the MonoSingleton.
+            </summary>
+        </member>
+        <member name="P:YUR.Fit.Unity.Utilities.YURShortcodeResponse.ShortCode">
+            <summary>
+            The shortcode to display to the user, which they should enter at the verification url
+            </summary>
+        </member>
+        <member name="P:YUR.Fit.Unity.Utilities.YURShortcodeResponse.VerificationURL">
+            <summary>
+            The URL to display to the user which they should visit to enter the shortcode
+            </summary>
+        </member>
+        <member name="P:YUR.Fit.Unity.Utilities.YURShortcodeResponse.ExpiresAt">
+            <summary>
+            A unix timestamp indicating when the shortcode expires (in milliseconds)
+            </summary>
+        </member>
+    </members>
+</doc>
